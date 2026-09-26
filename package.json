@@ -1,0 +1,27 @@
+{
+  "name": "sparklingstadt.github.io",
+  "version": "1.0.0",
+  "description": "Personal portfolio hosted at **https://sparklingstadt.github.io/**.",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --minify --outfile=script.js --target=es2020",
+    "test": "node --test tests/i18n.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sparklingstadt/sparklingstadt.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Sparklingstadt/sparklingstadt.github.io/issues"
+  },
+  "homepage": "https://github.com/Sparklingstadt/sparklingstadt.github.io#readme",
+  "dependencies": {
+    "i18next": "26.4.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "private": true
+}
