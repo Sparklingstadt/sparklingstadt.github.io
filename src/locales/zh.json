@@ -53,5 +53,6 @@
   "theme.dark": "切换至深色主题",
   "meta.title": "Sparklingstadt — 把创作汇集于此",
   "meta.description": "Sparklingstadt 的个人网站，展示 Web 开发、语言学习和日常工具项目。为人们服务，向未来奔跑。",
-  "meta.social": "探索我的 Web 应用、学习项目和日常工具。"
+  "meta.social": "探索我的 Web 应用、学习项目和日常工具。",
+  "links.privateSource": "源代码（私有）"
 }

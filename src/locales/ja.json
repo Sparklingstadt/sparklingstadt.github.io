@@ -53,5 +53,6 @@
   "theme.dark": "ダークテーマに切り替え",
   "meta.title": "Sparklingstadt — つくったものを、少しずつ。",
   "meta.description": "Sparklingstadtの個人サイト。Web開発、語学学習、日々の暮らしに役立つプロジェクトを紹介します。人々のために、未来へ向かって。",
-  "meta.social": "Webアプリ、学習プロジェクト、日々に役立つツールを紹介します。"
+  "meta.social": "Webアプリ、学習プロジェクト、日々に役立つツールを紹介します。",
+  "links.privateSource": "ソースコード（非公開）"
 }

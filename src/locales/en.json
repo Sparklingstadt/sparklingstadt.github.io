@@ -53,5 +53,6 @@
   "theme.dark": "Switch to dark theme",
   "meta.title": "Sparklingstadt — A space for things I build",
   "meta.description": "Sparklingstadt — projects in web development, language learning, and everyday tools. We serve the people, run for the future.",
-  "meta.social": "Explore my web apps, learning projects, and everyday tools."
+  "meta.social": "Explore my web apps, learning projects, and everyday tools.",
+  "links.privateSource": "Source code (private)"
 }
