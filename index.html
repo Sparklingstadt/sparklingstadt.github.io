@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sparklingstadt — projects in web development, language learning, and everyday tools. We serve the people, run for the future.">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta property="og:title" content="Sparklingstadt — A space for things I build">
+  <meta property="og:description" content="Explore my web apps, learning projects, and everyday tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sparklingstadt.github.io/">
+  <link rel="canonical" href="https://sparklingstadt.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Sparklingstadt — A space for things I build</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#" aria-label="Sparklingstadt home"><span class="spark" aria-hidden="true">✳</span> Sparklingstadt<span class="wordmark-dot">.</span></a>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="https://github.com/Sparklingstadt">GitHub <span aria-hidden="true">↗</span></a></nav>
+    <button class="theme-toggle" type="button" aria-label="Switch color theme" hidden><span aria-hidden="true">◐</span></button>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> THE PERSONAL SPACE OF SPARKLINGSTADT</p>
+        <h1 id="hero-title">A space for<br>things I <em>build.</em></h1>
+        <p class="hero-description">Web apps, learning experiments, and little tools for everyday life. Welcome to my corner of the internet.</p>
+        <a class="button" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="art-label">IDEAS → SOMETHING REAL</div>
+        <div class="flower">✳</div><div class="art-chip chip-one">&lt; build /&gt;</div><div class="art-chip chip-two">一歩ずつ。</div>
+        <div class="art-footer"><span>ALWAYS A WORK IN PROGRESS</span><span>＋</span></div>
+      </div>
+      <div class="hero-bottom"><span>We serve the people, run for the future.</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+    <section id="work" class="work-section wrap" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">Made to be used.<br>Built to learn.</h2></div><a class="text-link" href="https://github.com/Sparklingstadt?tab=repositories">All repositories <span aria-hidden="true">↗</span></a></div>
+      <div class="project-grid">
+        <article class="project">
+          <div class="project-art language-art" aria-hidden="true"><span class="art-caption">LANGUAGE / LEARNING</span><div class="language-symbol">学<span class="small-character">習</span></div><div class="pinyin">xué · learn, one sentence at a time</div></div>
+          <div class="project-heading"><h3>Zhuelog</h3><span class="project-number">01</span></div>
+          <p>A Chinese writing journal for corrections, pinyin, and learning hints. A place to keep each small discovery.</p>
+          <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Language learning</span></div>
+          <div class="project-links"><a href="https://ffpf-zhuelog.vercel.app">Visit app <span aria-hidden="true">↗</span></a><a href="https://github.com/Sparklingstadt/ffpf-zhuelog">Source code <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project">
+          <div class="project-art yohaku-art" aria-hidden="true"><span class="art-caption">LIFESTYLE / COMMERCE</span><div class="yohaku-type">余白<span>Y O H A K U</span></div><div class="yohaku-circle"></div><span class="art-footnote">A STUDY IN EVERYDAY THINGS</span></div>
+          <div class="project-heading"><h3>YOHAKU / 余白</h3><span class="project-number">02</span></div>
+          <p>A Japanese lifestyle store demo, built with Ruby on Rails as a portfolio and learning project.</p>
+          <div class="tags"><span>Ruby on Rails</span><span>E-commerce</span><span>Learning demo</span></div>
+          <div class="project-links"><a href="https://github.com/Sparklingstadt/rails-ec-store">Explore repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project">
+          <div class="project-art task-art" aria-hidden="true"><span class="art-caption">ORGANIZE / EVERYDAY</span><div class="note"><span class="note-title">A little more clarity.</span><span><i class="check">✓</i> Start somewhere</span><span><i class="check">✓</i> Make something useful</span><span><i></i> Keep going</span></div></div>
+          <div class="project-heading"><h3>Tasknote</h3><span class="project-number">03</span></div>
+          <p>A Japanese todo app exploring Rails, Hotwire, and SQLite, with unit and end-to-end tests.</p>
+          <div class="tags"><span>Ruby on Rails</span><span>Hotwire</span><span>SQLite</span></div>
+          <div class="project-links"><a href="https://github.com/Sparklingstadt/rails-todo-app">Explore repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="project">
+          <div class="project-art rust-art" aria-hidden="true"><span class="art-caption">TOOLS / EXPERIMENTS</span><div class="brackets">{<span>to do<br><b>→ done</b></span>}</div><span class="art-footnote">SMALL TASKS. SOLID FOUNDATIONS.</span></div>
+          <div class="project-heading"><h3>Topcoat Todo</h3><span class="project-number">04</span></div>
+          <p>A Japanese todo app built with Rust and Topcoat, with SQLite persistence and visual regression tests.</p>
+          <div class="tags"><span>Rust</span><span>SQLite</span><span>Playwright</span></div>
+          <div class="project-links"><a href="https://github.com/Sparklingstadt/topcoat-todo">Explore repository <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+    <section id="about" class="about-section" aria-labelledby="about-title"><div class="wrap about-layout">
+      <div><p class="eyebrow">02 / A LITTLE ABOUT ME</p><h2 id="about-title">Hello, I’m<br><span>Sparklingstadt.</span></h2></div>
+      <div class="about-copy"><p class="about-lead">“We serve the people,<br>run for the future.”</p><p>My projects range from language-learning apps to task managers and e-commerce demos. This site brings a few of those public projects together.</p><p>I explore ideas through code, working across TypeScript, Next.js, Ruby on Rails, and Rust.</p><a class="text-link" href="https://github.com/Sparklingstadt">Find me on GitHub <span aria-hidden="true">↗</span></a></div>
+    </div></section>
+  </main>
+  <footer class="wrap"><a class="wordmark" href="#"><span class="spark" aria-hidden="true">✳</span> Sparklingstadt.</a><span>A little corner of the internet.</span><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>
