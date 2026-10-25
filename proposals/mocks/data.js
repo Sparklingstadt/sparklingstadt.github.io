@@ -1,4 +1,4 @@
-// Shared by every mock. Loads data.json and fills:
+// Shared by every mock. Loads the site's data.json (../../data.json) and fills:
 // - [data-profile="name|initial|github|email"] text and [data-profile-link] hrefs;
 // - [data-content="group.key"] text from data.text ({name} is replaced);
 // - [data-content-lang="group"] text from data.text[group][element.lang].
@@ -8,7 +8,7 @@
 'use strict';
 
 (() => {
-  const source = new URL('data.json', document.currentScript.src);
+  const source = new URL('../../data.json', document.currentScript.src);
   const HOOKS = '[data-profile], [data-profile-link], [data-content], [data-content-lang]';
   let data = null;
 
