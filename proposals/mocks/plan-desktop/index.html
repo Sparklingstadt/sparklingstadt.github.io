@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0&amp;display=block">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
+<script src="../profile.js" defer></script>
 </head>
 <body>
 <div class="page">
@@ -44,7 +45,7 @@
 
   <!-- macOS: menu bar -->
   <div class="menubar only-macos">
-    <span class="menubar-name">[あなたの名前]</span>
+    <span class="menubar-name"><span data-profile="name">sparklingstadt</span></span>
     <span>ファイル</span><span>編集</span><span>表示</span><span>ウインドウ</span>
     <span class="menubar-clock" data-clock="mac">--:--</span>
   </div>
@@ -57,7 +58,7 @@
         <span class="ws-item">2</span>
         <span class="ws-item">3</span>
       </span>
-      <span class="waybar-title">about — [あなたの名前]</span>
+      <span class="waybar-title">about — <span data-profile="name">sparklingstadt</span></span>
       <span class="waybar-cpu">[CPU]</span>
       <span class="waybar-vol">[音量]</span>
       <span class="waybar-clock" data-clock="hypr">--:--</span>
@@ -66,7 +67,7 @@
 
   <!-- Material 3: top app bar -->
   <div class="m3-topbar only-material">
-    <span class="m3-topbar-name">[あなたの名前]</span>
+    <span class="m3-topbar-name"><span data-profile="name">sparklingstadt</span></span>
     <nav class="m3-nav" aria-label="セクション">
       <a href="#projects">プロジェクト</a>
       <a href="#rice">Linux</a>
@@ -79,7 +80,7 @@
   <!-- HarmonyOS: large title -->
   <div class="hm-title only-harmonyos">
     <div class="hm-title-text">
-      <span class="hm-title-name">[あなたの名前]</span>
+      <span class="hm-title-name"><span data-profile="name">sparklingstadt</span></span>
       <span class="hm-title-sub">Webエンジニア志望</span>
     </div>
     <nav class="hm-nav" aria-label="セクション">
@@ -104,7 +105,7 @@
             <span lang="ja">こんにちは</span><span lang="zh-Hans" class="font-sc">你好</span><span lang="ru">Привет</span><span lang="cs">Ahoj</span>
           </p>
           <h1 class="tagline" id="tagline" lang="ja">型と言語のあいだで、Webをつくる。</h1>
-          <p class="intro">Webエンジニア志望の [あなたの名前] です。macOS の、おしゃれなのに実用的なデザインが好きです。Arch Linux と Hyprland で自分の環境を作り込むうちに、Linux そのものにも惹かれました。TypeScript を軸に Go と Kotlin を学び、中国語・ロシア語・チェコ語も勉強しています。</p>
+          <p class="intro">Webエンジニア志望の <span data-profile="name">sparklingstadt</span> です。macOS の、おしゃれなのに実用的なデザインが好きです。Arch Linux と Hyprland で自分の環境を作り込むうちに、Linux そのものにも惹かれました。TypeScript を軸に Go と Kotlin を学び、中国語・ロシア語・チェコ語も勉強しています。</p>
           <div class="actions">
             <a class="cta" href="#contact"><span class="material-symbols-rounded only-material" aria-hidden="true">mail</span>連絡する</a>
             <a class="btn2" href="#projects">プロジェクトを見る</a>
@@ -221,7 +222,7 @@
         </div>
         <div class="term">
           <span><span class="t-prompt">❯</span> fastfetch</span>
-          <span class="t-user">[user]@[host]</span>
+          <span class="t-user"><span data-profile="name">sparklingstadt</span>@[host]</span>
           <span class="t-rule">───────────────</span>
           <span><span class="t-key">OS</span> Arch Linux x86_64</span>
           <span><span class="t-key">WM</span> Hyprland</span>
@@ -283,8 +284,8 @@
         </div>
         <div class="card-body card-body--contact">
           <h2><span class="material-symbols-rounded only-material" aria-hidden="true">mail</span>連絡先</h2>
-          <span>Email <span class="email">[メールアドレス]</span></span>
-          <a class="github" href="#contact">GitHub [@your-id]</a>
+          <span>Email <span class="email"><span data-profile="email">sparklingstadt@outlook.jp</span></span></span>
+          <a class="github" href="https://github.com/sparklingstadt" data-profile-link="github">GitHub <span data-profile="github">@sparklingstadt</span></a>
           <div class="settings-row">
             <span class="ctp-note only-hyprland">配色: Catppuccin Mocha(常にダーク)</span>
             <label class="not-hyprland" for="tri-dark">ダークモード</label>

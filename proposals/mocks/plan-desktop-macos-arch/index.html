@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Sans+SC:wght@500;700&amp;display=swap">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
+<script src="../profile.js" defer></script>
 </head>
 <body>
 
@@ -31,7 +32,7 @@
   <div class="screen">
 
     <div class="menubar only-macos">
-      <span class="menubar__app">[あなたの名前]</span>
+      <span class="menubar__app"><span data-profile="name">sparklingstadt</span></span>
       <span>ファイル</span><span>編集</span><span>表示</span><span>ウインドウ</span><span>ヘルプ</span>
       <span class="menubar__clock" data-clock="macos">--:--</span>
     </div>
@@ -63,7 +64,7 @@
               <span lang="ja">こんにちは</span><span lang="zh-Hans" class="sc">你好</span><span lang="ru">Привет</span><span lang="cs">Ahoj</span>
             </p>
             <h1 class="about__title">型と言語のあいだで、Webをつくる。</h1>
-            <p class="about__lead">Webエンジニア志望の [あなたの名前] です。macOS の、おしゃれなのに実用的なデザインが好きです。Arch Linux と Hyprland で自分の環境を作り込むうちに、Linux そのものにも惹かれました。TypeScript を軸に Go と Kotlin を学んでいます。</p>
+            <p class="about__lead">Webエンジニア志望の <span data-profile="name">sparklingstadt</span> です。macOS の、おしゃれなのに実用的なデザインが好きです。Arch Linux と Hyprland で自分の環境を作り込むうちに、Linux そのものにも惹かれました。TypeScript を軸に Go と Kotlin を学んでいます。</p>
             <div class="about__actions">
               <a class="btn btn--primary" href="#projects">プロジェクトを見る</a>
               <a class="btn btn--secondary" href="#rice">dotfiles を見る</a>
@@ -98,7 +99,7 @@
           </div>
           <div class="term">
             <span><span class="term__prompt">❯</span> fastfetch</span>
-            <span class="term__userhost">[user]@[host]</span>
+            <span class="term__userhost"><span data-profile="name">sparklingstadt</span>@[host]</span>
             <span class="term__rule">───────────────</span>
             <span><span class="term__key">OS</span> Arch Linux x86_64</span>
             <span><span class="term__key">WM</span> Hyprland</span>
@@ -183,8 +184,8 @@
           </div>
           <div class="contact">
             <h2 class="win__h2">連絡先</h2>
-            <span>Email <span class="contact__mail">[メールアドレス]</span></span>
-            <a class="contact__link" href="#projects">GitHub [@your-id]</a>
+            <span>Email <span class="contact__mail"><span data-profile="email">sparklingstadt@outlook.jp</span></span></span>
+            <a class="contact__link" href="https://github.com/sparklingstadt" data-profile-link="github">GitHub <span data-profile="github">@sparklingstadt</span></a>
           </div>
         </div>
       </div>
