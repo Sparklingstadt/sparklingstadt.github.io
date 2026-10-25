@@ -58,6 +58,10 @@
   "s8.title": "Contact",
   "s8.body": "Feedback on this document is welcome on GitHub.",
   "s8.issues": "File an issue",
+  "s9.title": "Design proposals",
+  "s9.body": "Design proposals for this site are published as working mocks: an Apple HIG version, a multilingual version, and versions that switch between macOS, Arch Linux + Hyprland, Material 3, and HarmonyOS.",
+  "s9.link": "View all mocks",
+  "s9.note": "The mocks are in Japanese only and are not indexed by search engines.",
   "refs.title": "References",
   "motto": "We serve the people, run for the future.",
   "footer.top": "Back to top ↑"
