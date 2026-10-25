@@ -4,6 +4,98 @@
     "github": "sparklingstadt",
     "email": "sparklingstadt@outlook.jp"
   },
+  "projects": [
+    {
+      "id": "zhuelog",
+      "name": "Zhuelog",
+      "category": {
+        "en": "Language / Learning",
+        "ja": "語学 / 学習",
+        "zh": "语言 / 学习"
+      },
+      "description": {
+        "en": "A Chinese writing journal for corrections, pinyin, and learning hints. A place to keep each small discovery.",
+        "ja": "中国語の作文添削、ピン音、学習のヒントを記録する学習日誌。小さな発見を、一つずつ残せる場所です。",
+        "zh": "记录中文作文修改、拼音和学习提示的学习日志，把每一个小发现都留下来。"
+      },
+      "stack": [
+        "Next.js",
+        "TypeScript"
+      ],
+      "links": {
+        "app": "https://ffpf-zhuelog.vercel.app",
+        "source": "https://github.com/Sparklingstadt/ffpf-zhuelog"
+      }
+    },
+    {
+      "id": "typle-r",
+      "name": "typle-r",
+      "category": {
+        "en": "Typing / Practice",
+        "ja": "タイピング / 練習",
+        "zh": "打字 / 练习"
+      },
+      "description": {
+        "en": "A touch-typing practice app built with Next.js. A space to develop fluency, one keystroke at a time.",
+        "ja": "Next.jsでつくったタッチタイピング練習アプリ。一打ずつ、スムーズに入力する力を育てます。",
+        "zh": "使用 Next.js 构建的盲打练习应用。通过每一次按键，逐步提升输入的流畅度。"
+      },
+      "stack": [
+        "Next.js",
+        "TypeScript"
+      ],
+      "links": {
+        "app": "https://typle-r-six.vercel.app",
+        "source": "https://github.com/Sparklingstadt/typle-r",
+        "sourcePrivate": true
+      }
+    },
+    {
+      "id": "candy-rain-store",
+      "name": "candy-rain-store",
+      "category": {
+        "en": "Shopping / Commerce",
+        "ja": "ショッピング / EC",
+        "zh": "购物 / 电商"
+      },
+      "description": {
+        "en": "A full-stack e-commerce demo with product browsing, a shopping cart, checkout, and order history.",
+        "ja": "商品閲覧、カート、購入手続き、注文履歴までを備えた、フルスタックのECデモアプリです。",
+        "zh": "涵盖商品浏览、购物车、结算和订单历史的全栈电商演示应用。"
+      },
+      "stack": [
+        "Next.js",
+        "Prisma",
+        "PostgreSQL"
+      ],
+      "links": {
+        "app": "https://candy-rain-store.vercel.app",
+        "source": "https://github.com/Sparklingstadt/prd-ec-shop"
+      }
+    },
+    {
+      "id": "ramen-concierge",
+      "name": "ramen-concierge",
+      "category": {
+        "en": "Food / Memories",
+        "ja": "食 / 記録",
+        "zh": "美食 / 记忆"
+      },
+      "description": {
+        "en": "A personal ramen archive to record each bowl, revisit meals on a calendar, and find inspiration for the next one.",
+        "ja": "一杯ごとのラーメンを記録し、カレンダーで振り返るアプリ。次に食べたい一杯のヒントも見つかります。",
+        "zh": "记录每一碗拉面，通过日历回顾美食记忆，也为下一碗寻找灵感。"
+      },
+      "stack": [
+        "Next.js",
+        "TypeScript"
+      ],
+      "links": {
+        "app": "https://prd-ramen-concierge-frontend.vercel.app",
+        "source": "https://github.com/Sparklingstadt/prd-ramen-concierge-frontend"
+      }
+    }
+  ],
   "text": {
     "greeting": {
       "ja": "こんにちは",

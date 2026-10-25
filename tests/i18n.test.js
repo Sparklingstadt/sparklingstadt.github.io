@@ -19,7 +19,7 @@ test('i18next changes languages and falls back to Japanese for missing resources
   await instance.init({ resources, lng: 'en', fallbackLng: 'ja', keySeparator: false });
   for (const language of ['en', 'ja', 'zh']) {
     await instance.changeLanguage(language);
-    assert.equal(instance.t('zhuelog.description'), resources[language].translation['zhuelog.description']);
+    assert.equal(instance.t('s1.body'), resources[language].translation['s1.body']);
     assert.equal(instance.t('theme.dark'), resources[language].translation['theme.dark']);
   }
   await instance.changeLanguage('fr');

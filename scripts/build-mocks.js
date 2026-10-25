@@ -1,4 +1,4 @@
-// Writes the text from proposals/mocks/data.json into each mock's HTML, so the
+// Writes the text from data.json (repository root) into each mock's HTML, so the
 // static pages already hold the current copy before data.js runs (and without
 // JavaScript). It fills the same hooks data.js fills at runtime:
 // [data-profile], [data-profile-link] (href), [data-content], [data-content-lang].
@@ -18,7 +18,7 @@ const escapeText = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;
 const escapeAttribute = (text) => escapeText(text).replaceAll('"', '&quot;');
 
 export function readData() {
-  return JSON.parse(readFileSync(new URL('data.json', MOCKS_DIR), 'utf8'));
+  return JSON.parse(readFileSync(new URL('../data.json', import.meta.url), 'utf8'));
 }
 
 // Same rules as proposals/mocks/data.js.
