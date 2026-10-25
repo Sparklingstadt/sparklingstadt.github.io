@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ja" data-desktop="macos">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>デスクトップ案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Sans+SC:wght@500;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="toolbar">
+  <span class="toolbar__label">デスクトップ</span>
+  <div class="seg" role="group" aria-label="デスクトップの見た目">
+    <button type="button" class="seg__btn" data-mode="macos" aria-pressed="true">macOS</button>
+    <button type="button" class="seg__btn" data-mode="hyprland" aria-pressed="false">Arch + Hyprland</button>
+  </div>
+  <ul class="diffs">
+    <li class="diffs__chip">ウインドウ: タイトルバーと3つのボタン</li>
+    <li class="diffs__chip">配置: 影で重なりを示し、余白を広く</li>
+    <li class="diffs__chip">書体: システムフォント</li>
+    <li class="diffs__chip">色: 明るい壁紙と白いウインドウ</li>
+  </ul>
+</header>
+
+<main class="stage">
+  <div class="screen">
+
+    <div class="menubar only-macos">
+      <span class="menubar__app">[あなたの名前]</span>
+      <span>ファイル</span><span>編集</span><span>表示</span><span>ウインドウ</span><span>ヘルプ</span>
+      <span class="menubar__clock" data-clock="macos">--:--</span>
+    </div>
+
+    <div class="waybar-wrap only-hyprland">
+      <div class="waybar">
+        <span class="waybar__ws">
+          <span class="waybar__wsitem is-on">1</span>
+          <span class="waybar__wsitem">2</span>
+          <span class="waybar__wsitem">3</span>
+        </span>
+        <span class="waybar__title">kitty — fastfetch</span>
+        <span class="waybar__cpu">[CPU]</span>
+        <span class="waybar__vol">[音量]</span>
+        <span class="waybar__clock" data-clock="hyprland">--:--</span>
+      </div>
+    </div>
+
+    <div class="tiles">
+
+      <div class="win win--about is-active">
+        <div class="win__body win__body--light">
+          <div class="titlebar titlebar--light only-macos">
+            <span class="lights lights--color" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="titlebar__title">about</span>
+          </div>
+          <div class="about">
+            <p class="about__hello">
+              <span lang="ja">こんにちは</span><span lang="zh-Hans" class="sc">你好</span><span lang="ru">Привет</span><span lang="cs">Ahoj</span>
+            </p>
+            <h1 class="about__title">型と言語のあいだで、Webをつくる。</h1>
+            <p class="about__lead">Webエンジニア志望の [あなたの名前] です。macOS の、おしゃれなのに実用的なデザインが好きです。Arch Linux と Hyprland で自分の環境を作り込むうちに、Linux そのものにも惹かれました。TypeScript を軸に Go と Kotlin を学んでいます。</p>
+            <div class="about__actions">
+              <a class="btn btn--primary" href="#projects">プロジェクトを見る</a>
+              <a class="btn btn--secondary" href="#rice">dotfiles を見る</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="win win--me">
+        <div class="win__body win__body--code">
+          <div class="titlebar titlebar--dark only-macos">
+            <span class="lights lights--dim-dark" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="titlebar__title">me.ts</span>
+          </div>
+          <div class="scroll-x">
+<pre class="code code--me" lang="en"><span class="tok-kw">interface</span> Me {
+  <span class="tok-prop">role</span>: <span class="tok-str">"Web Engineer"</span>;
+  <span class="tok-prop">stack</span>: [<span class="tok-str">"TypeScript"</span>, <span class="tok-str">"Node.js"</span>];
+  <span class="tok-prop">learning</span>: [<span class="tok-str">"Go"</span>, <span class="tok-str">"Kotlin"</span>];
+  <span class="tok-prop">desktop</span>: [<span class="tok-str">"macOS"</span>, <span class="tok-str">"Arch + Hyprland"</span>];
+  <span class="tok-prop">speaks</span>: [<span class="tok-str">"ja"</span>, <span class="tok-str">"zh"</span>, <span class="tok-str">"ru"</span>, <span class="tok-str">"cs"</span>];
+}</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="win win--rice" id="rice">
+        <div class="win__body win__body--term">
+          <div class="titlebar titlebar--dark only-macos">
+            <span class="lights lights--dim-dark" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="titlebar__title">Terminal — fastfetch</span>
+          </div>
+          <div class="term">
+            <span><span class="term__prompt">❯</span> fastfetch</span>
+            <span class="term__userhost">[user]@[host]</span>
+            <span class="term__rule">───────────────</span>
+            <span><span class="term__key">OS</span> Arch Linux x86_64</span>
+            <span><span class="term__key">WM</span> Hyprland</span>
+            <span><span class="term__key">Bar</span> [Waybar など]</span>
+            <span><span class="term__key">Shell</span> [zsh / fish]</span>
+            <span><span class="term__key">Terminal</span> [kitty など]</span>
+            <span><span class="term__key">Theme</span> [Catppuccin Mocha など]</span>
+            <span class="swatches" aria-hidden="true"><span style="--c: var(--ctp-surface1)"></span><span style="--c: var(--ctp-red)"></span><span style="--c: var(--ctp-green)"></span><span style="--c: var(--ctp-yellow)"></span><span style="--c: var(--ctp-blue)"></span><span style="--c: var(--ctp-pink)"></span><span style="--c: var(--ctp-teal)"></span><span style="--c: var(--ctp-subtext1)"></span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="win win--conf">
+        <div class="win__body win__body--code">
+          <div class="titlebar titlebar--dark only-macos">
+            <span class="lights lights--dim-dark" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="titlebar__title">hyprland.conf</span>
+          </div>
+          <div class="scroll-x">
+<pre class="code code--conf"><span class="tok-com"># このページの見た目も同じ値</span>
+<span class="tok-kw">general</span> {
+  <span class="tok-prop">gaps_in</span> = <span class="tok-str">5</span>
+  <span class="tok-prop">gaps_out</span> = <span class="tok-str">10</span>
+  <span class="tok-prop">border_size</span> = <span class="tok-str">2</span>
+}
+<span class="tok-kw">decoration</span> {
+  <span class="tok-prop">rounding</span> = <span class="tok-str">10</span>
+}
+<span class="tok-prop">bind</span> = SUPER, Return, exec, [kitty]</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="win win--story">
+        <div class="win__body win__body--light">
+          <div class="titlebar titlebar--light titlebar--inactive only-macos">
+            <span class="lights lights--dim-light" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="titlebar__title">Rice から Linux へ</span>
+          </div>
+          <div class="story">
+            <h2 class="win__h2">Rice から Linux へ</h2>
+            <ol class="steps">
+              <li class="steps__item"><span class="steps__num">1</span><span class="steps__text">見た目を整えたくて、Arch Linux に Hyprland を入れて Rice を始めた</span></li>
+              <li class="steps__item"><span class="steps__num">2</span><span class="steps__text">設定ファイルを書くうちに、Linux の仕組みそのものに興味を持った [例: Wayland、systemd、パッケージ管理]</span></li>
+              <li class="steps__item"><span class="steps__num">3</span><span class="steps__text">[いま取り組んでいること: dotfiles の公開、自作スクリプトなど]</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="win win--projects" id="projects">
+        <div class="win__body win__body--light">
+          <div class="titlebar titlebar--light titlebar--inactive only-macos">
+            <span class="lights lights--dim-light" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="titlebar__title">プロジェクト</span>
+          </div>
+          <div class="projects">
+            <a class="proj" href="#projects">
+              <span class="proj__name">[プロジェクト名 1]</span>
+              <span class="proj__desc">[何を作ったか。誰のどんな問題を解決したか。]</span>
+              <span class="proj__stack">TypeScript · Node.js</span>
+            </a>
+            <a class="proj" href="#projects">
+              <span class="proj__name">dotfiles</span>
+              <span class="proj__desc">[Hyprland・Waybar などの設定。工夫した点とスクリーンショット]</span>
+              <span class="proj__stack">Shell · Lua · [その他]</span>
+            </a>
+            <a class="proj" href="#projects">
+              <span class="proj__name">[プロジェクト名 2]</span>
+              <span class="proj__desc">[Go または Kotlin で作ったもの]</span>
+              <span class="proj__stack">Go</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="win win--contact">
+        <div class="win__body win__body--light">
+          <div class="titlebar titlebar--light titlebar--inactive only-macos">
+            <span class="lights lights--dim-light" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="titlebar__title">連絡先</span>
+          </div>
+          <div class="contact">
+            <h2 class="win__h2">連絡先</h2>
+            <span>Email <span class="contact__mail">[メールアドレス]</span></span>
+            <a class="contact__link" href="#projects">GitHub [@your-id]</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <p class="note">Hyprland 表示の隙間・枠線・角丸は、右上の hyprland.conf と同じ値(gaps_in 5 → 隙間 10px、gaps_out 10、border_size 2、rounding 10)にしています。配色は Catppuccin Mocha です。</p>
+</main>
+
+</body>
+</html>

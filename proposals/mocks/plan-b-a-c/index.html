@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>推奨案 Hybrid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Noto+Sans+SC:wght@500;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<div class="page">
+
+<header class="site-header">
+<div class="header-inner">
+<span class="site-name">[あなたの名前]</span>
+<nav class="site-nav" aria-label="セクション">
+<a href="#axes">3つの軸</a>
+<a href="#projects">プロジェクト</a>
+<a href="#notes">ノート</a>
+<a href="#languages">言語</a>
+<a href="#contact">連絡先</a>
+</nav>
+<div class="lang-switch" role="group" aria-label="表示言語">
+<button type="button" lang="ja" aria-pressed="true" data-tagline="型と言語のあいだで、Webをつくる。">JA</button>
+<button type="button" lang="zh-Hans" aria-pressed="false" data-tagline="在类型与语言之间，构建 Web。">中</button>
+<button type="button" lang="ru" aria-pressed="false" data-tagline="Создаю веб между типами и языками.">RU</button>
+<button type="button" lang="cs" aria-pressed="false" data-tagline="Tvořím web mezi typy a jazyky.">CS</button>
+<button type="button" lang="en" aria-pressed="false" data-tagline="Building the web, between types and languages.">EN</button>
+</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-text">
+<p class="greetings">
+<span lang="ja">こんにちは</span><span lang="zh-Hans" class="font-sc">你好</span><span lang="ru">Привет</span><span lang="cs">Ahoj</span>
+</p>
+<h1 class="tagline" lang="ja">型と言語のあいだで、Webをつくる。</h1>
+<p class="lead">Webエンジニア志望の [あなたの名前] です。Node.js と Web標準で、使う人の設定を尊重するUIをつくります。TypeScript を軸に Go と Kotlin を学び、中国語・ロシア語・チェコ語も勉強しています。</p>
+<div class="actions">
+<a class="btn btn-primary" href="#projects">プロジェクトを見る</a>
+<a class="btn btn-secondary" href="#contact">連絡する</a>
+</div>
+</div>
+<div class="code-card">
+<div class="code-card-title">me.ts</div>
+<div class="code-scroll">
+<pre><span class="tk-kw">interface</span> Me {
+  <span class="tk-key">role</span>: <span class="tk-str">"Web Engineer"</span>;
+  <span class="tk-key">stack</span>: [<span class="tk-str">"TypeScript"</span>, <span class="tk-str">"Node.js"</span>];
+  <span class="tk-key">learning</span>: [<span class="tk-str">"Go"</span>, <span class="tk-str">"Kotlin"</span>];
+  <span class="tk-key">reading</span>: <span class="tk-str">"Apple HIG"</span>;
+  <span class="tk-key">speaks</span>: [<span class="tk-str">"ja"</span>, <span class="tk-str">"zh"</span>, <span class="tk-str">"ru"</span>, <span class="tk-str">"cs"</span>];
+}</pre>
+</div>
+</div>
+</section>
+
+<main class="main">
+
+<section id="axes" class="sec">
+<h2>3つの軸</h2>
+<div class="axes-grid">
+<div class="card axis">
+<span class="axis-label">Types</span>
+<h3>型で考える</h3>
+<p>TypeScript で設計を型に表す。Go と Kotlin で、別の型システムの考え方を学ぶ。</p>
+</div>
+<div class="card axis">
+<span class="axis-label">Standards</span>
+<h3>標準に沿ってつくる</h3>
+<p>Web標準と Node.js を土台に、HIG の原則で使いやすさを判断する。</p>
+</div>
+<div class="card axis">
+<span class="axis-label">Languages</span>
+<h3>ことばを行き来する</h3>
+<p>中国語・ロシア語・チェコ語の学習で、文字と文法の違いを肌で知る。i18n の実装に活きる。</p>
+</div>
+</div>
+</section>
+
+<section id="projects" class="sec">
+<h2>プロジェクト</h2>
+<div class="projects-grid">
+<article class="card project">
+<div class="project-head">
+<h3>[プロジェクト名 1]</h3>
+<span class="project-stack">TypeScript · Node.js</span>
+</div>
+<dl class="project-dl">
+<dt>課題</dt><dd>[解決したかった問題]</dd>
+<dt>設計判断</dt><dd>[なぜその構成にしたか。採用しなかった案]</dd>
+<dt>学び</dt><dd>[次に活かすこと]</dd>
+</dl>
+<a class="more" href="#projects">詳しく読む</a>
+</article>
+<article class="card project">
+<div class="project-head">
+<h3>[プロジェクト名 2]</h3>
+<span class="project-stack">Go</span>
+</div>
+<dl class="project-dl">
+<dt>課題</dt><dd>[解決したかった問題]</dd>
+<dt>設計判断</dt><dd>[TypeScript ならどう書いたかとの比較]</dd>
+<dt>学び</dt><dd>[次に活かすこと]</dd>
+</dl>
+<a class="more" href="#projects">詳しく読む</a>
+</article>
+</div>
+</section>
+
+<section id="notes" class="sec sec-notes">
+<h2>ノート</h2>
+<div class="card list">
+<a class="note-row" href="#notes">
+<span class="note-kind" data-kind="hig">HIG</span>
+<span class="note-title">[HIG 読書メモのタイトル]</span>
+<span class="note-date">[日付]</span>
+<svg class="chevron" width="8" height="14" viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+<a class="note-row" href="#notes">
+<span class="note-kind" data-kind="tech">技術</span>
+<span class="note-title">[Web標準・Node.js の記事タイトル]</span>
+<span class="note-date">[日付]</span>
+<svg class="chevron" width="8" height="14" viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+<a class="note-row" href="#notes">
+<span class="note-kind" data-kind="lang">語学</span>
+<span class="note-title">[中国語・ロシア語・チェコ語の学習ログ]</span>
+<span class="note-date">[日付]</span>
+<svg class="chevron" width="8" height="14" viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+<a class="note-row" href="#notes">
+<span class="note-kind" data-kind="tech">技術</span>
+<span class="note-title">[Go と TypeScript の比較メモ]</span>
+<span class="note-date">[日付]</span>
+<svg class="chevron" width="8" height="14" viewBox="0 0 8 14" aria-hidden="true"><path d="M1 1l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+</div>
+</section>
+
+<section id="languages" class="languages">
+<div class="languages-intro">
+<h2>言語</h2>
+<p>同じ「5件のプロジェクト」でも、言語ごとに語の形が変わります。このサイトでは Intl.PluralRules で出し分けています。</p>
+</div>
+<div class="card list languages-list">
+<div class="lang-row">
+<span lang="zh-Hans" class="lang-name font-sc">中文</span>
+<span class="lang-level">[学習期間・レベル]</span>
+<span lang="zh-Hans" class="lang-count font-sc">5 个项目</span>
+</div>
+<div class="lang-row">
+<span lang="ru" class="lang-name">Русский</span>
+<span class="lang-level">[学習期間・レベル]</span>
+<span lang="ru" class="lang-count">5 проектов</span>
+</div>
+<div class="lang-row">
+<span lang="cs" class="lang-name">Čeština</span>
+<span class="lang-level">[学習期間・レベル]</span>
+<span lang="cs" class="lang-count">5 projektů</span>
+</div>
+</div>
+</section>
+
+<section id="contact" class="sec sec-contact">
+<h2>連絡先</h2>
+<div class="card list contact-list">
+<div class="contact-row">
+<span class="contact-label">メール</span>
+<span class="contact-mail">[メールアドレス]</span>
+</div>
+<a class="contact-row" href="#contact">
+<span class="contact-label">GitHub</span>
+<span class="contact-link">[@your-id]</span>
+</a>
+</div>
+</section>
+
+<footer class="site-footer">
+<span class="footer-title">このサイトについて</span>
+<div class="badges">
+<span>JavaScript なしで読める</span>
+<span>prefers-color-scheme 対応</span>
+<span>View Transitions API</span>
+<span>hreflang で5言語</span>
+<span>Lighthouse [スコア]</span>
+</div>
+<span>ソースコードと設計判断のメモは <a href="#contact">GitHub</a> で公開しています。</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>
