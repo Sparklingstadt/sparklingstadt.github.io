@@ -28,3 +28,14 @@ The language selector switches text immediately without navigation. The saved la
 GitHub Pages serves the root of `main`. Commit the rebuilt `script.js` together with source changes. Pushes publish automatically; `.nojekyll` disables Jekyll processing.
 
 The site features public projects from [Sparklingstadt on GitHub](https://github.com/Sparklingstadt). No analytics or tracking scripts are included.
+
+## Design proposals
+
+`proposals/mocks/<plan>/` holds standalone design mocks for the portfolio (plain HTML, CSS, and JavaScript; no build step). Each page sets `noindex`. Open them at `https://sparklingstadt.github.io/proposals/mocks/<plan>/`:
+
+- `plan-b`: Apple HIG style
+- `plan-c`: multilingual (Intl.PluralRules and Intl.DateTimeFormat demos)
+- `plan-b-a-c`: HIG layout, spec-style type card, and multilingual hero
+- `plan-hig-material3`: one markup switched between HIG and Material 3 with design tokens
+- `plan-desktop-macos-arch`: desktop of windows switched between macOS and Arch Linux + Hyprland
+- `plan-desktop`: macOS, Arch Linux + Hyprland, Material 3, and HarmonyOS
