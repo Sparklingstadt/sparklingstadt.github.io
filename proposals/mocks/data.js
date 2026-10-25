@@ -2,9 +2,9 @@
 // - [data-profile="name|initial|github|email"] text and [data-profile-link] hrefs;
 // - [data-content="group.key"] text from data.text ({name} is replaced);
 // - [data-content-lang="group"] text from data.text[group][element.lang].
-// The HTML already holds the same text, so pages read correctly without
-// JavaScript or if the request fails. Page scripts that change an element's
-// lang call MockData.render(element) to refresh it.
+// scripts/build-mocks.js writes the same text into the HTML (npm run build), so
+// pages read correctly without JavaScript or if the request fails. Page scripts
+// that change an element's lang call MockData.render(element) to refresh it.
 'use strict';
 
 (() => {
