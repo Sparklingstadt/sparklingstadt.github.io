@@ -4,6 +4,40 @@
     "github": "sparklingstadt",
     "email": "sparklingstadt@outlook.jp"
   },
+  "certifications": [
+    {
+      "id": "hsk1",
+      "name": {
+        "en": "HSK Level 1 (Chinese Proficiency Test)",
+        "ja": "漢語水平考試一級",
+        "zh": "汉语水平考试一级"
+      }
+    },
+    {
+      "id": "hsk2",
+      "name": {
+        "en": "HSK Level 2 (Chinese Proficiency Test)",
+        "ja": "漢語水平考試二級",
+        "zh": "汉语水平考试二级"
+      }
+    },
+    {
+      "id": "hsk3",
+      "name": {
+        "en": "HSK Level 3 (Chinese Proficiency Test)",
+        "ja": "漢語水平考試三級",
+        "zh": "汉语水平考试三级"
+      }
+    },
+    {
+      "id": "hsk4",
+      "name": {
+        "en": "HSK Level 4 (Chinese Proficiency Test)",
+        "ja": "漢語水平考試四級",
+        "zh": "汉语水平考试四级"
+      }
+    }
+  ],
   "projects": [
     {
       "id": "zhuelog",
@@ -138,7 +172,8 @@
       "darkMode": "ダークモード",
       "filterAll": "すべて",
       "filterMobile": "モバイル",
-      "riceToLinux": "Rice から Linux へ"
+      "riceToLinux": "Rice から Linux へ",
+      "certifications": "所持資格"
     },
     "project": {
       "name1": "[プロジェクト名 1]",

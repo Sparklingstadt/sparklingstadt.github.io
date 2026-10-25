@@ -165,6 +165,9 @@ main h3 .secno { font-size: 1rem; }
 .facts dd { margin: 0; overflow-wrap: anywhere; }
 .facts .mono { font-size: 0.875rem; }
 
+/* Certifications */
+.certifications { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 4px; }
+
 /* Table */
 .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 4px; }
 table { width: 100%; min-width: 480px; border-collapse: collapse; font-size: 0.9375rem; }

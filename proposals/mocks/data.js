@@ -1,7 +1,8 @@
 // Shared by every mock. Loads the site's data.json (../../data.json) and fills:
 // - [data-profile="name|initial|github|email"] text and [data-profile-link] hrefs;
 // - [data-content="group.key"] text from data.text ({name} is replaced);
-// - [data-content-lang="group"] text from data.text[group][element.lang].
+// - [data-content-lang="group"] text from data.text[group][element.lang];
+// - [data-certification="id"] text from data.certifications (name in the page's language).
 // scripts/build-mocks.js writes the same text into the HTML (npm run build), so
 // pages read correctly without JavaScript or if the request fails. Page scripts
 // that change an element's lang call MockData.render(element) to refresh it.
@@ -9,7 +10,7 @@
 
 (() => {
   const source = new URL('../../data.json', document.currentScript.src);
-  const HOOKS = '[data-profile], [data-profile-link], [data-content], [data-content-lang]';
+  const HOOKS = '[data-profile], [data-profile-link], [data-content], [data-content-lang], [data-certification]';
   let data = null;
 
   const lookup = (path) => path.split('.').reduce((value, key) => value?.[key], data.text);
@@ -27,11 +28,15 @@
   });
 
   const renderElement = (element, text, links) => {
-    const { profile, profileLink, content, contentLang } = element.dataset;
+    const { profile, profileLink, content, contentLang, certification } = element.dataset;
     let value;
     if (profile) value = text[profile];
     else if (content) value = fill(lookup(content));
     else if (contentLang) value = fill(lookup(`${contentLang}.${element.lang}`));
+    else if (certification) {
+      const language = element.closest('[lang]')?.lang || 'ja';
+      value = data.certifications?.find((item) => item.id === certification)?.name[language];
+    }
     if (value) element.textContent = value;
     if (profileLink && links[profileLink]) element.href = links[profileLink];
   };

@@ -403,6 +403,7 @@ a:hover {
 .win--conf     { flex: 1 1 340px; }
 .win--story    { flex: 1 1 300px; }
 .win--projects { flex: 2 1 480px; }
+.win--certs    { flex: 1 1 280px; }
 .win--contact  { flex: 1 1 280px; }
 
 .win__body {

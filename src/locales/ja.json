@@ -47,6 +47,8 @@
   "s7.col.tag": "言語タグ",
   "s7.col.sample": "ひとこと",
   "s7.note": "§5.1 の Zhuelog は、中国語学習のためにつくったツールである。",
+  "certs.title": "所持資格",
+  "certs.intro": "Sparklingstadt は次の資格を持つ。",
   "s8.title": "連絡先",
   "s8.body": "この文書への意見は GitHub で受け付ける。",
   "s8.issues": "Issue を立てる",

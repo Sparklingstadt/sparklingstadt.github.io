@@ -33,3 +33,14 @@ test('renderMock fills each hook type from data.json', () => {
   ].join(''));
   assert.throws(() => renderMock('<b data-content="label.missing">x</b>', sample), /label\.missing/);
 });
+
+test('renderMock fills certification names in Japanese unless the element sets lang', () => {
+  const sample = {
+    profile: { name: 'someone', github: 'gh', email: 'a@example.com' },
+    certifications: [{ id: 'hsk1', name: { en: 'HSK Level 1', ja: '漢語水平考試一級', zh: '汉语水平考试一级' } }],
+    text: {},
+  };
+  assert.equal(renderMock('<li data-certification="hsk1">old</li>', sample), '<li data-certification="hsk1">漢語水平考試一級</li>');
+  assert.equal(renderMock('<li lang="zh" data-certification="hsk1">old</li>', sample), '<li lang="zh" data-certification="hsk1">汉语水平考试一级</li>');
+  assert.throws(() => renderMock('<li data-certification="nope">old</li>', sample), /certification nope/);
+});

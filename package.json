@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Personal portfolio hosted at **https://sparklingstadt.github.io/**.",
   "scripts": {
-    "build": "esbuild src/main.js --bundle --minify --outfile=script.js --target=es2020 && node scripts/build-mocks.js && node scripts/build-projects.js",
-    "test": "node --test tests/i18n.test.js tests/mocks.test.js tests/projects.test.js"
+    "build": "esbuild src/main.js --bundle --minify --outfile=script.js --target=es2020 && node scripts/build-mocks.js && node scripts/build-index.js",
+    "test": "node --test tests/i18n.test.js tests/mocks.test.js tests/index.test.js"
   },
   "repository": {
     "type": "git",

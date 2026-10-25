@@ -47,6 +47,8 @@
   "s7.col.tag": "Language tag",
   "s7.col.sample": "Sample",
   "s7.note": "Zhuelog (§5.1) is a tool made for studying Chinese.",
+  "certs.title": "Certifications",
+  "certs.intro": "Sparklingstadt holds the following certifications.",
   "s8.title": "Contact",
   "s8.body": "Feedback on this document is welcome on GitHub.",
   "s8.issues": "File an issue",

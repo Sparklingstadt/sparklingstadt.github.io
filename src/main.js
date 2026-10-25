@@ -2,8 +2,8 @@ import i18next from 'i18next';
 import en from './locales/en.json';
 import ja from './locales/ja.json';
 import zh from './locales/zh.json';
-// Only the projects list is bundled; esbuild drops the rest of data.json.
-import { projects } from '../data.json';
+// Only these lists are bundled; esbuild drops the rest of data.json.
+import { certifications, projects } from '../data.json';
 
 const root = document.documentElement;
 const toggle = document.querySelector('.theme-toggle');
@@ -35,13 +35,19 @@ const renderDates = () => {
     element.textContent = new Intl.DateTimeFormat(root.lang, { dateStyle: 'long', timeZone: 'UTC' }).format(date);
   });
 };
-// Project text lives in data.json; scripts/build-projects.js writes the English
-// version into index.html, and this swaps in the current language.
+// Project and certification text lives in data.json; scripts/build-index.js
+// writes the English version into index.html, and this swaps in the current
+// language.
+const translated = (text) => text?.[i18next.language] ?? text?.en;
 const renderProjects = () => {
   document.querySelectorAll('[data-project][data-project-field]').forEach(element => {
     const project = projects.find(item => item.id === element.dataset.project);
-    const text = project?.[element.dataset.projectField];
-    const value = text?.[i18next.language] ?? text?.en;
+    const value = translated(project?.[element.dataset.projectField]);
+    if (value) element.textContent = value;
+  });
+  document.querySelectorAll('[data-certification]').forEach(element => {
+    const certification = certifications.find(item => item.id === element.dataset.certification);
+    const value = translated(certification?.name);
     if (value) element.textContent = value;
   });
 };

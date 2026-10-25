@@ -47,6 +47,8 @@
   "s7.col.tag": "语言标签",
   "s7.col.sample": "例句",
   "s7.note": "§5.1 中的 Zhuelog 是为学习中文而制作的工具。",
+  "certs.title": "资格证书",
+  "certs.intro": "Sparklingstadt 持有以下资格证书。",
   "s8.title": "联系方式",
   "s8.body": "欢迎在 GitHub 上对本文档提出意见。",
   "s8.issues": "提交 Issue",

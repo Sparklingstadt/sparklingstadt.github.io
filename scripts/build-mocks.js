@@ -1,7 +1,8 @@
 // Writes the text from data.json (repository root) into each mock's HTML, so the
 // static pages already hold the current copy before data.js runs (and without
 // JavaScript). It fills the same hooks data.js fills at runtime:
-// [data-profile], [data-profile-link] (href), [data-content], [data-content-lang].
+// [data-profile], [data-profile-link] (href), [data-content], [data-content-lang],
+// [data-certification] (the Japanese name, since the mocks are in Japanese).
 //
 //   node scripts/build-mocks.js           rewrite the HTML files
 //   node scripts/build-mocks.js --check   exit 1 if any file is out of date
@@ -11,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 export const MOCKS_DIR = new URL('../proposals/mocks/', import.meta.url);
 export const PLANS = ['plan-b', 'plan-c', 'plan-b-a-c', 'plan-hig-material3', 'plan-desktop-macos-arch', 'plan-desktop'];
 
-const HOOKED_TAG = /<([a-zA-Z][\w-]*)(\s[^>]*?\bdata-(?:profile|profile-link|content|content-lang)="[^"]*"[^>]*)>/g;
+const HOOKED_TAG = /<([a-zA-Z][\w-]*)(\s[^>]*?\bdata-(?:profile|profile-link|content|content-lang|certification)="[^"]*"[^>]*)>/g;
 const ATTRIBUTE = /([\w-]+)="([^"]*)"/g;
 
 const escapeText = (text) => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
@@ -40,11 +41,13 @@ function resolver(data) {
       const profile = attributes['data-profile'];
       const content = attributes['data-content'];
       const contentLang = attributes['data-content-lang'];
+      const certification = attributes['data-certification'];
       let key;
       let value;
       if (profile) [key, value] = [`profile ${profile}`, profileText[profile]];
       else if (content) [key, value] = [content, fill(lookup(content))];
       else if (contentLang) [key, value] = [`${contentLang}.${attributes.lang}`, fill(lookup(`${contentLang}.${attributes.lang}`))];
+      else if (certification) [key, value] = [`certification ${certification}`, data.certifications?.find((item) => item.id === certification)?.name[attributes.lang || 'ja']];
       else return undefined;
       if (value === undefined) throw new Error(`data.json has no text for "${key}"`);
       return value;
