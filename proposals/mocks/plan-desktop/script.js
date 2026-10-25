@@ -24,14 +24,6 @@
     }
   };
 
-  var TAGLINES = {
-    'ja': '型と言語のあいだで、Webをつくる。',
-    'zh-Hans': '在类型与语言之间，构建 Web。',
-    'ru': 'Создаю веб между типами и языками.',
-    'cs': 'Tvořím web mezi typy a jazyky.',
-    'en': 'Building the web, between types and languages.'
-  };
-
   function $(sel) { return document.querySelector(sel); }
   function $$(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
 
@@ -58,10 +50,11 @@
   }
 
   function setLang(code) {
-    if (!TAGLINES[code]) return;
+    if (!$('[data-control="lang"] button[data-value="' + code + '"]')) return;
     var h1 = $('#tagline');
     h1.lang = code;
-    h1.textContent = TAGLINES[code];
+    // The tagline for each language comes from ../data.json.
+    if (window.MockData) window.MockData.render(h1);
     press('lang', code);
   }
 
