@@ -2,6 +2,8 @@
 
 Personal portfolio: **https://sparklingstadt.github.io/**
 
+The site is written as a "Living Standard": a specification-style document with numbered sections, a table of contents, RFC 2119 requirements, an IDL block, notes, examples, and references.
+
 HTML and CSS with [i18next](https://www.i18next.com/) installed through npm. The interface supports Japanese, English, and Simplified Chinese, including navigation, project descriptions, metadata, and accessible labels. Project and technology names remain unchanged.
 
 ## Development
@@ -19,10 +21,10 @@ Run `npm run build` after changing JavaScript or translations. esbuild bundles i
 
 ## Language and theme
 
-The language selector switches text immediately without navigation. The saved language takes priority, followed by the first supported browser language, with Japanese as the fallback. Chinese variants use Simplified Chinese (`zh-Hans`). Language and theme preferences are stored locally when browser storage is available. With JavaScript disabled, the original English content and all project links remain available.
+The language selector switches text immediately without navigation. The saved language takes priority, followed by the first supported browser language, with Japanese as the fallback. Chinese variants use Simplified Chinese (`zh-Hans`). The "Last Updated" date is formatted for the selected language with `Intl.DateTimeFormat`; update its `datetime` attribute in `index.html` when the content changes. The theme follows `prefers-color-scheme` until the visitor picks one with the toggle. Language and theme preferences are stored locally when browser storage is available. With JavaScript disabled, the original English content and all project links remain available.
 
 ## Deployment
 
 GitHub Pages serves the root of `main`. Commit the rebuilt `script.js` together with source changes. Pushes publish automatically; `.nojekyll` disables Jekyll processing.
 
-The site features public projects from [Sparklingstadt on GitHub](https://github.com/Sparklingstadt). Artwork is decorative CSS typography, not application screenshots. No analytics or tracking scripts are included.
+The site features public projects from [Sparklingstadt on GitHub](https://github.com/Sparklingstadt). No analytics or tracking scripts are included.

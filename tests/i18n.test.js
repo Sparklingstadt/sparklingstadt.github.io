@@ -23,5 +23,5 @@ test('i18next changes languages and falls back to Japanese for missing resources
     assert.equal(instance.t('theme.dark'), resources[language].translation['theme.dark']);
   }
   await instance.changeLanguage('fr');
-  assert.equal(instance.t('nav.work'), '代表作');
+  assert.equal(instance.t('toc.title'), '目次');
 });
