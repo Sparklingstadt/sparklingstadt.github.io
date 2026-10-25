@@ -3,25 +3,19 @@
   'use strict';
 
   // --- language switcher ---------------------------------------------------
-  var LANGS = {
-    'ja':      { greet: 'こんにちは', tagline: '型と言語のあいだで、Webをつくる。' },
-    'zh-Hans': { greet: '你好', tagline: '在类型与语言之间，构建 Web。' },
-    'ru':      { greet: 'Привет', tagline: 'Создаю веб между типами и языками.' },
-    'cs':      { greet: 'Ahoj', tagline: 'Tvořím web mezi typy a jazyky.' },
-    'en':      { greet: 'Hello', tagline: 'Building the web, between types and languages.' }
-  };
-
+  // The greeting and tagline text for each language comes from ../data.json.
   var hero = document.querySelector('.hero');
   var greet = document.getElementById('greet');
   var tagline = document.getElementById('tagline');
   var chips = document.querySelectorAll('.chip');
 
   function setLang(code) {
-    var l = LANGS[code] || LANGS.ja;
     hero.setAttribute('data-lang', code);
     greet.lang = tagline.lang = code;
-    greet.textContent = l.greet;
-    tagline.textContent = l.tagline;
+    if (window.MockData) {
+      window.MockData.render(greet);
+      window.MockData.render(tagline);
+    }
     chips.forEach(function (c) {
       c.setAttribute('aria-pressed', String(c.getAttribute('data-lang') === code));
     });

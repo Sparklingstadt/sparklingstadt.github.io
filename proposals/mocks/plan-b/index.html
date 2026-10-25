@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
-<script src="../profile.js" defer></script>
+<script src="../data.js" defer></script>
 </head>
 <body>
 <div class="layout">
@@ -20,15 +20,15 @@
     <div class="avatar" aria-hidden="true" data-profile="initial">S</div>
     <div class="profile-text">
       <span class="profile-name"><span data-profile="name">sparklingstadt</span></span>
-      <span class="profile-role">Webエンジニア志望</span>
+      <span class="profile-role" data-content="role">Webエンジニア志望</span>
     </div>
   </div>
   <nav class="card nav" aria-label="セクション">
     <a class="nav-item" href="#about"><span class="glyph" style="--glyph:#2563EB" aria-hidden="true">Me</span><span class="nav-label">概要</span></a>
     <a class="nav-item" href="#skills"><span class="glyph" style="--glyph:#0E7490" aria-hidden="true">TS</span><span class="nav-label">スキル</span></a>
-    <a class="nav-item" href="#projects"><span class="glyph" style="--glyph:#7C3AED" aria-hidden="true">Pj</span><span class="nav-label">プロジェクト</span></a>
+    <a class="nav-item" href="#projects"><span class="glyph" style="--glyph:#7C3AED" aria-hidden="true">Pj</span><span class="nav-label" data-content="label.projects">プロジェクト</span></a>
     <a class="nav-item" href="#display"><span class="glyph" style="--glyph:#475569" aria-hidden="true">Aa</span><span class="nav-label">表示とアクセシビリティ</span></a>
-    <a class="nav-item" href="#contact"><span class="glyph" style="--glyph:#B45309" aria-hidden="true">@</span><span class="nav-label">連絡先</span></a>
+    <a class="nav-item" href="#contact"><span class="glyph" style="--glyph:#B45309" aria-hidden="true">@</span><span class="nav-label" data-content="label.contact">連絡先</span></a>
   </nav>
 </aside>
 
@@ -68,30 +68,30 @@
 
   <section id="projects" class="section section-projects">
     <div class="projects-header">
-      <h2 class="title2">プロジェクト</h2>
+      <h2 class="title2" data-content="label.projects">プロジェクト</h2>
       <div class="segmented" role="group" aria-label="種類で絞り込む">
-        <button type="button" class="segment" data-filter="all" aria-pressed="true">すべて</button>
+        <button type="button" class="segment" data-filter="all" aria-pressed="true" data-content="label.filterAll">すべて</button>
         <button type="button" class="segment" data-filter="web" aria-pressed="false">Web</button>
         <button type="button" class="segment" data-filter="cli" aria-pressed="false">CLI</button>
-        <button type="button" class="segment" data-filter="mobile" aria-pressed="false">モバイル</button>
+        <button type="button" class="segment" data-filter="mobile" aria-pressed="false" data-content="label.filterMobile">モバイル</button>
       </div>
     </div>
     <div class="project-grid">
       <article class="card project" data-kind="web">
         <span class="project-kind">Web</span>
-        <h3 class="project-name">[プロジェクト名 1]</h3>
-        <p class="caption">[何を作ったか。誰のどんな問題を解決したか。]</p>
+        <h3 class="project-name" data-content="project.name1">[プロジェクト名 1]</h3>
+        <p class="caption" data-content="project.description1">[何を作ったか。誰のどんな問題を解決したか。]</p>
         <div class="tags"><span class="tag">TypeScript</span><span class="tag">Node.js</span></div>
       </article>
       <article class="card project" data-kind="cli">
         <span class="project-kind">CLI</span>
-        <h3 class="project-name">[プロジェクト名 2]</h3>
+        <h3 class="project-name" data-content="project.name2">[プロジェクト名 2]</h3>
         <p class="caption">[Go で作ったツール。学んだこと。]</p>
         <div class="tags"><span class="tag">Go</span></div>
       </article>
       <article class="card project" data-kind="mobile">
-        <span class="project-kind">モバイル</span>
-        <h3 class="project-name">[プロジェクト名 3]</h3>
+        <span class="project-kind" data-content="label.filterMobile">モバイル</span>
+        <h3 class="project-name" data-content="project.name3">[プロジェクト名 3]</h3>
         <p class="caption">[Kotlin で作ったアプリ。HIG と Material の違いで考えたこと。]</p>
         <div class="tags"><span class="tag">Kotlin</span><span class="tag">Compose</span></div>
       </article>
@@ -102,7 +102,7 @@
     <h2 class="group-header">表示とアクセシビリティ</h2>
     <div class="card list">
       <div class="row row-switch">
-        <label for="sw-dark" class="row-title">ダークモード</label>
+        <label for="sw-dark" class="row-title" data-content="label.darkMode">ダークモード</label>
         <button id="sw-dark" class="switch" type="button" role="switch" aria-checked="false" data-attr="theme" data-on="dark" data-off="light"><span class="knob" aria-hidden="true"></span></button>
       </div>
       <div class="row row-switch">
@@ -114,10 +114,10 @@
   </section>
 
   <section id="contact" class="section section-grouped">
-    <h2 class="group-header">連絡先</h2>
+    <h2 class="group-header" data-content="label.contact">連絡先</h2>
     <div class="card list">
       <div class="row">
-        <span class="row-title">メール</span>
+        <span class="row-title" data-content="label.mail">メール</span>
         <span class="row-value selectable"><span data-profile="email">sparklingstadt@outlook.jp</span></span>
       </div>
       <a class="row row-link" href="https://github.com/sparklingstadt" data-profile-link="github">

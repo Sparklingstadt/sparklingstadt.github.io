@@ -1,0 +1,94 @@
+{
+  "profile": {
+    "name": "sparklingstadt",
+    "github": "sparklingstadt",
+    "email": "sparklingstadt@outlook.jp"
+  },
+  "text": {
+    "greeting": {
+      "ja": "こんにちは",
+      "zh-Hans": "你好",
+      "ru": "Привет",
+      "cs": "Ahoj",
+      "en": "Hello"
+    },
+    "tagline": {
+      "ja": "型と言語のあいだで、Webをつくる。",
+      "zh-Hans": "在类型与语言之间，构建 Web。",
+      "ru": "Создаю веб между типами и языками.",
+      "cs": "Tvořím web mezi typy a jazyky.",
+      "en": "Building the web, between types and languages."
+    },
+    "languageName": {
+      "ja": "日本語",
+      "zh-Hans": "中文",
+      "ru": "Русский",
+      "cs": "Čeština",
+      "en": "English"
+    },
+    "intro": {
+      "web": "Webエンジニア志望の {name} です。Node.js と Web標準で、使う人の設定を尊重するUIをつくります。TypeScript を軸に Go と Kotlin を学び、中国語・ロシア語・チェコ語も勉強しています。"
+    },
+    "role": "Webエンジニア志望",
+    "label": {
+      "projects": "プロジェクト",
+      "contact": "連絡先",
+      "mail": "メール",
+      "email": "Email",
+      "notes": "ノート",
+      "axes": "3つの軸",
+      "viewProjects": "プロジェクトを見る",
+      "contactMe": "連絡する",
+      "readMore": "詳しく読む",
+      "problem": "課題",
+      "decision": "設計判断",
+      "learned": "学び",
+      "darkMode": "ダークモード",
+      "filterAll": "すべて",
+      "filterMobile": "モバイル",
+      "riceToLinux": "Rice から Linux へ"
+    },
+    "project": {
+      "name1": "[プロジェクト名 1]",
+      "name2": "[プロジェクト名 2]",
+      "name3": "[プロジェクト名 3]",
+      "description1": "[何を作ったか。誰のどんな問題を解決したか。]",
+      "dotfiles": "[Hyprland・Waybar などの設定。工夫した点とスクリーンショット]",
+      "stackWeb": "TypeScript · Node.js",
+      "problem": "[解決したかった問題]",
+      "decision": "[なぜその構成にしたか。採用しなかった案]",
+      "learned": "[次に活かすこと]",
+      "compare": "[TypeScript ならどう書いたかとの比較]"
+    },
+    "axis": {
+      "typesLabel": "Types",
+      "typesTitle": "型で考える",
+      "typesBody": "TypeScript で設計を型に表す。Go と Kotlin で、別の型システムの考え方を学ぶ。",
+      "standardsLabel": "Standards",
+      "standardsTitle": "標準に沿ってつくる",
+      "languagesLabel": "Languages",
+      "languagesTitle": "ことばを行き来する",
+      "languagesBody": "中国語・ロシア語・チェコ語の学習で、文字と文法の違いを肌で知る。i18n の実装に活きる。"
+    },
+    "note": {
+      "kindTech": "技術",
+      "kindLanguage": "語学",
+      "kindUiux": "UI / UX",
+      "hig": "[HIG 読書メモのタイトル]",
+      "web": "[Web標準・Node.js の記事タイトル]",
+      "languages": "[中国語・ロシア語・チェコ語の学習ログ]",
+      "date": "[日付]"
+    },
+    "rice": {
+      "step1": "見た目を整えたくて、Arch Linux に Hyprland を入れて Rice を始めた",
+      "step2": "設定ファイルを書くうちに、Linux の仕組みそのものに興味を持った [例: Wayland、systemd、パッケージ管理]",
+      "step3": "[いま取り組んでいること: dotfiles の公開、自作スクリプトなど]",
+      "bar": "[Waybar など]",
+      "shell": "[zsh / fish]",
+      "terminal": "[kitty など]",
+      "theme": "[Catppuccin Mocha など]",
+      "cpu": "[CPU]",
+      "volume": "[音量]"
+    }
+  }
+}

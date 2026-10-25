@@ -11,14 +11,6 @@
     material: ['書体: Roboto Flex', '主な操作: アイコン付きの FAB', '選択: チェック付きのチップ', 'スイッチ: つまみの大きさで状態を示す', '階層: 下地の色の濃淡と大きな角丸']
   };
 
-  const TAGLINES = {
-    ja: '型と言語のあいだで、Webをつくる。',
-    'zh-Hans': '在类型与语言之间，构建 Web。',
-    ru: 'Создаю веб между типами и языками.',
-    cs: 'Tvořím web mezi typy a jazyky.',
-    en: 'Building the web, between types and languages.'
-  };
-
   const actions = {
     design(value) {
       root.dataset.design = value;
@@ -32,7 +24,7 @@
     lang(value) {
       const tagline = document.getElementById('tagline');
       tagline.lang = value;
-      tagline.textContent = TAGLINES[value];
+      window.MockData?.render(tagline); // Text per language comes from ../data.json.
     },
     filter(value) {
       for (const card of document.querySelectorAll('.project[data-kind]')) {
