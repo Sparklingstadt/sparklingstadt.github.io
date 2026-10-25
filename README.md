@@ -31,7 +31,7 @@ The site features public projects from [Sparklingstadt on GitHub](https://github
 
 ## Design proposals
 
-`proposals/mocks/<plan>/` holds standalone design mocks for the portfolio (plain HTML, CSS, and JavaScript; no build step). Each page sets `noindex`. Open them at `https://sparklingstadt.github.io/proposals/mocks/<plan>/`:
+`proposals/mocks/<plan>/` holds standalone design mocks for the portfolio (plain HTML, CSS, and JavaScript; no build step). Each page sets `noindex`. The list page `proposals/mocks/` is linked from §9 of the main page and reuses `style.css`. Open a mock at `https://sparklingstadt.github.io/proposals/mocks/<plan>/`:
 
 - `plan-b`: Apple HIG style
 - `plan-c`: multilingual (Intl.PluralRules and Intl.DateTimeFormat demos)

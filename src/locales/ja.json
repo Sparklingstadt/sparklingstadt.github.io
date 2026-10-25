@@ -58,6 +58,10 @@
   "s8.title": "連絡先",
   "s8.body": "この文書への意見は GitHub で受け付ける。",
   "s8.issues": "Issue を立てる",
+  "s9.title": "デザイン案",
+  "s9.body": "このサイトのデザイン案を、実際に操作できるモックとして公開している。Apple HIG 版、多言語版、そして macOS・Arch Linux + Hyprland・Material 3・HarmonyOS を切り替える版がある。",
+  "s9.link": "モック一覧を見る",
+  "s9.note": "モックは日本語のみで、検索エンジンには登録されない。",
   "refs.title": "参考文献",
   "motto": "人々のために、未来へ向かって。",
   "footer.top": "ページ上部へ ↑"

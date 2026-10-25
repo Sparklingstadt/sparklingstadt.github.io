@@ -58,6 +58,10 @@
   "s8.title": "联系方式",
   "s8.body": "欢迎在 GitHub 上对本文档提出意见。",
   "s8.issues": "提交 Issue",
+  "s9.title": "设计方案",
+  "s9.body": "本站的设计方案以可交互的模型（mock）形式公开，包括 Apple HIG 版、多语言版，以及可在 macOS、Arch Linux + Hyprland、Material 3 和 HarmonyOS 之间切换的版本。",
+  "s9.link": "查看全部模型",
+  "s9.note": "这些模型仅提供日文版，且不会被搜索引擎收录。",
   "refs.title": "参考文献",
   "motto": "为人们服务，向未来奔跑。",
   "footer.top": "返回顶部 ↑"
