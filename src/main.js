@@ -24,7 +24,14 @@ const language = supported.includes(savedLanguage) ? savedLanguage : browserLang
 const isDark = () => root.dataset.theme ? root.dataset.theme === 'dark' : preference.matches;
 const updateTheme = () => {
   toggle.setAttribute('aria-label', i18next.t(isDark() ? 'theme.light' : 'theme.dark'));
-  document.querySelector('meta[name="theme-color"]').content = isDark() ? '#191f1c' : '#f5f3ed';
+  document.querySelector('meta[name="theme-color"]').content = isDark() ? '#15171a' : '#ffffff';
+};
+const renderDates = () => {
+  document.querySelectorAll('time[datetime]').forEach(element => {
+    const date = new Date(`${element.getAttribute('datetime')}T00:00:00Z`);
+    if (Number.isNaN(date.getTime())) return;
+    element.textContent = new Intl.DateTimeFormat(root.lang, { dateStyle: 'long', timeZone: 'UTC' }).format(date);
+  });
 };
 const renderLanguage = () => {
   root.lang = i18next.language === 'zh' ? 'zh-Hans' : i18next.language;
@@ -39,6 +46,7 @@ const renderLanguage = () => {
   document.querySelector('meta[property="og:title"]').content = i18next.t('meta.title');
   document.querySelector('meta[property="og:description"]').content = i18next.t('meta.social');
   languageSelect.value = i18next.language;
+  renderDates();
   updateTheme();
 };
 
