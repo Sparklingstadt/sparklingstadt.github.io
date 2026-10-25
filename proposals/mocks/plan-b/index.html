@@ -10,15 +10,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
+<script src="../profile.js" defer></script>
 </head>
 <body>
 <div class="layout">
 
 <aside class="sidebar">
   <div class="card profile">
-    <div class="avatar" aria-hidden="true">名</div>
+    <div class="avatar" aria-hidden="true" data-profile="initial">S</div>
     <div class="profile-text">
-      <span class="profile-name">[あなたの名前]</span>
+      <span class="profile-name"><span data-profile="name">sparklingstadt</span></span>
       <span class="profile-role">Webエンジニア志望</span>
     </div>
   </div>
@@ -117,11 +118,11 @@
     <div class="card list">
       <div class="row">
         <span class="row-title">メール</span>
-        <span class="row-value selectable">[メールアドレス]</span>
+        <span class="row-value selectable"><span data-profile="email">sparklingstadt@outlook.jp</span></span>
       </div>
-      <a class="row row-link" href="#contact">
+      <a class="row row-link" href="https://github.com/sparklingstadt" data-profile-link="github">
         <span class="row-title">GitHub</span>
-        <span class="row-accent">[@your-id]</span>
+        <span class="row-accent"><span data-profile="github">@sparklingstadt</span></span>
       </a>
     </div>
   </section>

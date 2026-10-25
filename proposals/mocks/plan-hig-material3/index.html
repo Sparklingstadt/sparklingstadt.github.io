@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0&amp;display=block">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
+<script src="../profile.js" defer></script>
 </head>
 <body>
 
@@ -33,7 +34,7 @@
 
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <span class="brand">[あなたの名前]</span>
+    <span class="brand"><span data-profile="name">sparklingstadt</span></span>
     <nav class="nav" aria-label="セクション">
       <a href="#axes">3つの軸</a>
       <a href="#projects">プロジェクト</a>
@@ -56,7 +57,7 @@
     <div class="hero__intro">
       <p class="hero__hello"><span lang="ja">こんにちは</span><span lang="zh-Hans">你好</span><span lang="ru">Привет</span><span lang="cs">Ahoj</span></p>
       <h1 class="hero__title" id="tagline" lang="ja">型と言語のあいだで、Webをつくる。</h1>
-      <p class="hero__bio">Webエンジニア志望の [あなたの名前] です。Node.js と Web標準で、使う人の設定を尊重するUIをつくります。TypeScript を軸に Go と Kotlin を学び、中国語・ロシア語・チェコ語も勉強しています。</p>
+      <p class="hero__bio">Webエンジニア志望の <span data-profile="name">sparklingstadt</span> です。Node.js と Web標準で、使う人の設定を尊重するUIをつくります。TypeScript を軸に Go と Kotlin を学び、中国語・ロシア語・チェコ語も勉強しています。</p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="#contact"><span class="material-symbols-rounded only-material" aria-hidden="true">mail</span>連絡する</a>
         <a class="btn btn--secondary" href="#projects">プロジェクトを見る</a>
@@ -207,12 +208,12 @@
       <div class="list-row">
         <span class="material-symbols-rounded list-row__icon only-material" aria-hidden="true">mail</span>
         <span class="list-row__label">メール</span>
-        <span class="contact__mail">[メールアドレス]</span>
+        <span class="contact__mail"><span data-profile="email">sparklingstadt@outlook.jp</span></span>
       </div>
-      <a class="list-row" href="#contact">
+      <a class="list-row" href="https://github.com/sparklingstadt" data-profile-link="github">
         <span class="material-symbols-rounded list-row__icon only-material" aria-hidden="true">code</span>
         <span class="list-row__label">GitHub</span>
-        <span class="contact__id">[@your-id]</span>
+        <span class="contact__id"><span data-profile="github">@sparklingstadt</span></span>
       </a>
     </div>
   </section>
