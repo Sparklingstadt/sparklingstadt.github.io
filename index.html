@@ -1,235 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A Living Standard that defines Sparklingstadt, an aspiring web engineer who likes Node.js, web standards, TypeScript, Go, Kotlin, and Apple's Human Interface Guidelines.">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#ffffff">
-  <meta property="og:title" content="Sparklingstadt Standard">
-  <meta property="og:description" content="Projects, principles, and languages, written as a specification.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sparklingstadt.github.io/">
-  <link rel="canonical" href="https://sparklingstadt.github.io/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=IBM+Plex+Sans:wght@400;500;700&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <title>Sparklingstadt Standard</title>
+  <meta name="robots" content="noindex">
+  <title>Sparklingstadt — moved</title>
+  <link rel="canonical" href="https://sparklingstadt.github.io/portfolio/">
+  <meta http-equiv="refresh" content="0; url=/portfolio/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>
+    // The main page now has one URL per language. Pick the language the old
+    // site would have shown: the saved choice (same origin, so the same
+    // localStorage), then the browser language, then Japanese.
+    (() => {
+      const pages = { ja: "", en: "en/", zh: "zh/" };
+      let language = null;
+      try { language = localStorage.getItem("language"); } catch { /* Storage is optional. */ }
+      if (!(language in pages)) {
+        language = (navigator.languages || [navigator.language])
+          .map((tag) => String(tag).toLowerCase().split("-")[0])
+          .find((code) => code in pages) || "ja";
+      }
+      location.replace("/portfolio/" + pages[language] + location.hash);
+    })();
+  </script>
 </head>
 <body>
-  <a class="skip-link" href="#main"><span data-i18n="skip">Skip to content</span></a>
-
-  <header class="spec-header">
-    <div class="wrap header-inner">
-      <div class="header-bar">
-        <span class="badge">Living Standard</span>
-        <span class="updated"><span data-i18n="header.updated">Last Updated</span> <time class="updated-date" datetime="2026-10-25">25 October 2026</time></span>
-        <span class="controls">
-          <select class="language-select" aria-label="Language" data-i18n-aria="a11y.language" hidden><option value="ja" lang="ja">日本語</option><option value="en" lang="en">English</option><option value="zh" lang="zh-Hans">简体中文</option></select>
-          <button class="theme-toggle" type="button" aria-label="Switch color theme" hidden><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg></button>
-        </span>
-      </div>
-      <h1>Sparklingstadt Standard</h1>
-      <p class="subtitle"><span data-i18n="header.subtitle">A specification of an aspiring web engineer who likes Node.js and web standards.</span></p>
-      <dl class="meta">
-        <dt><span data-i18n="header.thisVersion">This version:</span></dt>
-        <dd><a href="https://sparklingstadt.github.io/">https://sparklingstadt.github.io/</a></dd>
-        <dt><span data-i18n="header.participate">Participate:</span></dt>
-        <dd><a href="https://github.com/Sparklingstadt">GitHub Sparklingstadt</a></dd>
-        <dt><span data-i18n="header.editor">Editor:</span></dt>
-        <dd>Sparklingstadt</dd>
-      </dl>
-    </div>
-  </header>
-
-  <div class="wrap layout">
-    <nav class="toc" aria-label="Table of contents" data-i18n-aria="a11y.toc">
-      <h2 class="toc-title"><span data-i18n="toc.title">Table of Contents</span></h2>
-      <ol>
-        <li><a href="#abstract"><span class="secno">1</span> <span data-i18n="s1.title">Abstract</span></a></li>
-        <li><a href="#status"><span class="secno">2</span> <span data-i18n="s2.title">Status of this document</span></a></li>
-        <li><a href="#conformance"><span class="secno">3</span> <span data-i18n="s3.title">Conformance</span></a></li>
-        <li><a href="#idl"><span class="secno">4</span> IDL: interface Me</a></li>
-        <li><a href="#projects"><span class="secno">5</span> <span data-i18n="s5.title">Projects</span></a></li>
-        <li><a href="#environment"><span class="secno">6</span> <span data-i18n="s6.title">Environment</span></a></li>
-        <li><a href="#natural-languages"><span class="secno">7</span> <span data-i18n="s7.title">Natural languages</span></a></li>
-        <li><a href="#contact"><span class="secno">8</span> <span data-i18n="s8.title">Contact</span></a></li>
-        <li><a href="#proposals"><span class="secno">9</span> <span data-i18n="s9.title">Design proposals</span></a></li>
-        <li><a href="#references"><span class="secno"></span> <span data-i18n="refs.title">References</span></a></li>
-      </ol>
-    </nav>
-
-    <main id="main">
-      <section aria-labelledby="abstract">
-        <h2 id="abstract"><span class="secno">§1</span> <span data-i18n="s1.title">Abstract</span></h2>
-        <p><span data-i18n="s1.body">This document defines Sparklingstadt, an aspiring web engineer. Sparklingstadt prefers implementations that follow the specifications and respect each user's environment, writes mostly TypeScript, and has a strong interest in Go and Kotlin. Sparklingstadt enjoys reading Apple's Human Interface Guidelines [HIG] and is learning Chinese, Russian, and Czech.</span></p>
-      </section>
-
-      <section aria-labelledby="status">
-        <h2 id="status"><span class="secno">§2</span> <span data-i18n="s2.title">Status of this document</span></h2>
-        <p><span data-i18n="s2.body">This document is a Living Standard. It is updated as new projects ship and as learning progresses. Earlier versions are available in the GitHub commit history.</span></p>
-        <div class="note" role="note">
-          <span class="box-label"><span data-i18n="note.label">Note</span></span>
-          <p><span data-i18n="s2.note">Without JavaScript, this document is shown in English. Language and theme preferences are stored only in your browser.</span></p>
-        </div>
-      </section>
-
-      <section aria-labelledby="conformance">
-        <h2 id="conformance"><span class="secno">§3</span> <span data-i18n="s3.title">Conformance</span></h2>
-        <p><span data-i18n="s3.intro">The key words MUST and SHOULD in this section are to be interpreted as described in [RFC2119]. When writing code, Sparklingstadt follows these requirements.</span></p>
-        <ol class="requirements">
-          <li><strong class="rfc2119">MUST</strong> <span data-i18n="s3.r1">Whatever can be built with web standards must be built with web standards.</span></li>
-          <li><strong class="rfc2119">MUST</strong> <span data-i18n="s3.r2">The color scheme, motion, and text size that each user has chosen must be respected.</span></li>
-          <li><strong class="rfc2119">SHOULD</strong> <span data-i18n="s3.r3">Types should read as documentation.</span></li>
-          <li><strong class="rfc2119">SHOULD</strong> <span data-i18n="s3.r4">The main content should remain readable without JavaScript.</span></li>
-        </ol>
-      </section>
-
-      <section aria-labelledby="idl">
-        <h2 id="idl"><span class="secno">§4</span> IDL: interface Me</h2>
-        <p><span data-i18n="s4.intro">Skills and interests are represented by the following type.</span></p>
-        <pre class="idl"><code><span class="kw">interface</span> Me {
-  <span class="kw">readonly</span> <span class="prop">role</span>: <span class="str">"Web Engineer (aspiring)"</span>;
-  <span class="prop">stack</span>: [<span class="str">"TypeScript"</span>, <span class="str">"Next.js"</span>, <span class="str">"Ruby on Rails"</span>, <span class="str">"Rust"</span>];
-  <span class="prop">interests</span>: [<span class="str">"Go"</span>, <span class="str">"Kotlin"</span>, <span class="str">"Node.js"</span>, <span class="str">"Web Standards"</span>];
-  <span class="prop">reads</span>: <span class="str">"Apple Human Interface Guidelines"</span>;
-  <span class="prop">desktop</span>: [<span class="str">"macOS"</span>, <span class="str">"Arch Linux + Hyprland"</span>];
-  <span class="prop">languages</span>: [<span class="str" lang="ja">"日本語"</span>, <span class="str" lang="zh-Hans">"中文"</span>, <span class="str" lang="ru">"Русский"</span>, <span class="str" lang="cs">"Čeština"</span>];
-}</code></pre>
-        <div class="note" role="note">
-          <span class="box-label"><span data-i18n="note.label">Note</span></span>
-          <p><span data-i18n="s4.note">TypeScript is the main language. Go and Kotlin are being learned; the projects in §5 show how far each one goes.</span></p>
-        </div>
-      </section>
-
-      <section aria-labelledby="projects">
-        <h2 id="projects"><span class="secno">§5</span> <span data-i18n="s5.title">Projects</span></h2>
-        <p><span data-i18n="s5.intro">My projects range from language learning and typing practice to e-commerce and food journals. This section brings a few of those public projects together.</span></p>
-
-        <!-- projects:start: generated from data.json by npm run build -->
-        <article class="project" aria-labelledby="zhuelog">
-          <h3 id="zhuelog"><span class="secno">§5.1</span> Zhuelog</h3>
-          <p><span data-project="zhuelog" data-project-field="description">A Chinese writing journal for corrections, pinyin, and learning hints. A place to keep each small discovery.</span></p>
-          <dl class="facts">
-            <dt><span data-i18n="project.category">Category</span></dt><dd><span data-project="zhuelog" data-project-field="category">Language / Learning</span></dd>
-            <dt><span data-i18n="project.stack">Stack</span></dt><dd class="mono">Next.js · TypeScript</dd>
-            <dt><span data-i18n="project.links">Links</span></dt><dd><a href="https://ffpf-zhuelog.vercel.app"><span data-i18n="links.visit">Visit app</span></a> · <a href="https://github.com/Sparklingstadt/ffpf-zhuelog"><span data-i18n="links.source">Source code</span></a></dd>
-          </dl>
-        </article>
-
-        <article class="project" aria-labelledby="typle-r">
-          <h3 id="typle-r"><span class="secno">§5.2</span> typle-r</h3>
-          <p><span data-project="typle-r" data-project-field="description">A touch-typing practice app built with Next.js. A space to develop fluency, one keystroke at a time.</span></p>
-          <dl class="facts">
-            <dt><span data-i18n="project.category">Category</span></dt><dd><span data-project="typle-r" data-project-field="category">Typing / Practice</span></dd>
-            <dt><span data-i18n="project.stack">Stack</span></dt><dd class="mono">Next.js · TypeScript</dd>
-            <dt><span data-i18n="project.links">Links</span></dt><dd><a href="https://typle-r-six.vercel.app"><span data-i18n="links.visit">Visit app</span></a> · <a href="https://github.com/Sparklingstadt/typle-r"><span data-i18n="links.privateSource">Source code (private)</span></a></dd>
-          </dl>
-        </article>
-
-        <article class="project" aria-labelledby="candy-rain-store">
-          <h3 id="candy-rain-store"><span class="secno">§5.3</span> candy-rain-store</h3>
-          <p><span data-project="candy-rain-store" data-project-field="description">A full-stack e-commerce demo with product browsing, a shopping cart, checkout, and order history.</span></p>
-          <dl class="facts">
-            <dt><span data-i18n="project.category">Category</span></dt><dd><span data-project="candy-rain-store" data-project-field="category">Shopping / Commerce</span></dd>
-            <dt><span data-i18n="project.stack">Stack</span></dt><dd class="mono">Next.js · Prisma · PostgreSQL</dd>
-            <dt><span data-i18n="project.links">Links</span></dt><dd><a href="https://candy-rain-store.vercel.app"><span data-i18n="links.visit">Visit app</span></a> · <a href="https://github.com/Sparklingstadt/prd-ec-shop"><span data-i18n="links.source">Source code</span></a></dd>
-          </dl>
-        </article>
-
-        <article class="project" aria-labelledby="ramen-concierge">
-          <h3 id="ramen-concierge"><span class="secno">§5.4</span> ramen-concierge</h3>
-          <p><span data-project="ramen-concierge" data-project-field="description">A personal ramen archive to record each bowl, revisit meals on a calendar, and find inspiration for the next one.</span></p>
-          <dl class="facts">
-            <dt><span data-i18n="project.category">Category</span></dt><dd><span data-project="ramen-concierge" data-project-field="category">Food / Memories</span></dd>
-            <dt><span data-i18n="project.stack">Stack</span></dt><dd class="mono">Next.js · TypeScript</dd>
-            <dt><span data-i18n="project.links">Links</span></dt><dd><a href="https://prd-ramen-concierge-frontend.vercel.app"><span data-i18n="links.visit">Visit app</span></a> · <a href="https://github.com/Sparklingstadt/prd-ramen-concierge-frontend"><span data-i18n="links.source">Source code</span></a></dd>
-          </dl>
-        </article>
-        <!-- projects:end -->
-
-        <p><a href="https://github.com/Sparklingstadt?tab=repositories"><span data-i18n="links.all">All repositories</span></a></p>
-      </section>
-
-      <section aria-labelledby="environment">
-        <h2 id="environment"><span class="secno">§6</span> <span data-i18n="s6.title">Environment</span></h2>
-        <p><span data-i18n="s6.macos">Sparklingstadt likes macOS for being stylish and practical at the same time.</span></p>
-        <p><span data-i18n="s6.linux">Building a rice on Arch Linux with Hyprland led Sparklingstadt to an interest in Linux itself.</span></p>
-        <div class="note" role="note">
-          <span class="box-label"><span data-i18n="note.label">Note</span></span>
-          <p><span data-i18n="s6.note">A rice is a customized desktop, built by editing configuration files such as hyprland.conf.</span></p>
-        </div>
-        <div class="example">
-          <span class="box-label"><span data-i18n="example.label">Example</span> 1</span>
-          <pre><code><span class="comment"># hyprland.conf</span>
-<span class="kw">general</span> {
-  <span class="prop">gaps_in</span> = <span class="str">5</span>
-  <span class="prop">gaps_out</span> = <span class="str">10</span>
-  <span class="prop">border_size</span> = <span class="str">2</span>
-}
-<span class="kw">decoration</span> {
-  <span class="prop">rounding</span> = <span class="str">10</span>
-}</code></pre>
-        </div>
-      </section>
-
-      <section aria-labelledby="natural-languages">
-        <h2 id="natural-languages"><span class="secno">§7</span> <span data-i18n="s7.title">Natural languages</span></h2>
-        <p><span data-i18n="s7.intro">Apart from programming languages, Sparklingstadt is learning the following natural languages.</span></p>
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr><th scope="col"><span data-i18n="s7.col.language">Language</span></th><th scope="col"><span data-i18n="s7.col.tag">Language tag</span></th><th scope="col"><span data-i18n="s7.col.sample">Sample</span></th></tr>
-            </thead>
-            <tbody>
-              <tr><td lang="zh-Hans">中文</td><td class="mono">zh-Hans</td><td lang="zh-Hans">我在学中文。</td></tr>
-              <tr><td lang="ru">Русский</td><td class="mono">ru</td><td lang="ru">Я изучаю русский язык.</td></tr>
-              <tr><td lang="cs">Čeština</td><td class="mono">cs</td><td lang="cs">Učím se česky.</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="note" role="note">
-          <span class="box-label"><span data-i18n="note.label">Note</span></span>
-          <p><span data-i18n="s7.note">Zhuelog (§5.1) is a tool made for studying Chinese.</span></p>
-        </div>
-      </section>
-
-      <section aria-labelledby="contact">
-        <h2 id="contact"><span class="secno">§8</span> <span data-i18n="s8.title">Contact</span></h2>
-        <p><span data-i18n="s8.body">Feedback on this document is welcome on GitHub.</span></p>
-        <dl class="facts">
-          <dt>GitHub</dt><dd><a href="https://github.com/Sparklingstadt">github.com/Sparklingstadt</a></dd>
-          <dt>Issues</dt><dd><a href="https://github.com/Sparklingstadt/sparklingstadt.github.io/issues"><span data-i18n="s8.issues">File an issue</span></a></dd>
-        </dl>
-      </section>
-
-      <section aria-labelledby="proposals">
-        <h2 id="proposals"><span class="secno">§9</span> <span data-i18n="s9.title">Design proposals</span></h2>
-        <p><span data-i18n="s9.body">Design proposals for this site are published as working mocks: an Apple HIG version, a multilingual version, and versions that switch between macOS, Arch Linux + Hyprland, Material 3, and HarmonyOS.</span></p>
-        <p><a href="proposals/mocks/"><span data-i18n="s9.link">View all mocks</span></a></p>
-        <div class="note" role="note">
-          <span class="box-label"><span data-i18n="note.label">Note</span></span>
-          <p><span data-i18n="s9.note">The mocks are in Japanese only and are not indexed by search engines.</span></p>
-        </div>
-      </section>
-
-      <section class="references" aria-labelledby="references">
-        <h2 id="references"><span data-i18n="refs.title">References</span></h2>
-        <dl>
-          <dt>[HIG]</dt><dd>Apple. <cite>Human Interface Guidelines</cite>. <a href="https://developer.apple.com/design/human-interface-guidelines/">developer.apple.com/design/human-interface-guidelines</a></dd>
-          <dt>[HTML]</dt><dd>WHATWG. <cite>HTML Living Standard</cite>. <a href="https://html.spec.whatwg.org/">html.spec.whatwg.org</a></dd>
-          <dt>[RFC2119]</dt><dd>S. Bradner. <cite>Key words for use in RFCs to Indicate Requirement Levels</cite>. <a href="https://www.rfc-editor.org/rfc/rfc2119">rfc-editor.org/rfc/rfc2119</a></dd>
-        </dl>
-      </section>
-    </main>
-  </div>
-
-  <footer class="wrap site-footer">
-    <span><span data-i18n="motto">We serve the people, run for the future.</span></span>
-    <a href="#main"><span data-i18n="footer.top">Back to top ↑</span></a>
-  </footer>
+  <p>このサイトは移転しました / This site has moved: <a href="/portfolio/">https://sparklingstadt.github.io/portfolio/</a></p>
 </body>
 </html>
